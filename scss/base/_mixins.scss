@@ -1,0 +1,12 @@
+@import 'variables';
+
+@mixin no_link_decor {
+    a{
+        text-decoration: none;
+        color: $second_color;
+        &:hover{
+            text-decoration: none;
+            color: $second_color;
+        }
+    }
+}
