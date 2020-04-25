@@ -226,13 +226,6 @@
   text-transform: uppercase;
 }
 
-.advantages__label {
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-  color: #0d0d0d;
-}
-
 .advantages__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,6 +233,71 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.consultation {
+  min-height: 680px;
+  padding: 100px 0 92px 0;
+  background: url("../../img/consultation.jpg") center center/cover no-repeat;
+}
+
+.consultation__descr {
+  margin-top: 80px;
+  max-width: 400px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #0d0d0d;
+  text-transform: uppercase;
+}
+
+.title_left {
+  font-size: 36px;
+  text-align: left;
+  color: #ffffff;
+  line-height: 42px;
+}
+
+.feed-form {
+  max-width: 300px;
+  margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.feed-form input {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.feed-form button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+@media (max-width: 1191px) {
+  .consultation__wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -253,6 +311,10 @@
   }
   .promo__wrapper {
     padding-right: 50px;
+  }
+  .title_left {
+    font-size: 21px;
+    line-height: 24px;
   }
 }
 
@@ -276,6 +338,18 @@
 }
 
 @media (max-width: 525px) {
+  .consultation {
+    padding: 80px 0 72px 0;
+  }
+  .consultation__descr {
+    margin: 40px auto;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .feed-form {
+    margin: 36px auto;
+  }
   .header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -308,6 +382,12 @@
     align-items: center;
     margin-top: 30px;
   }
+  .title_left {
+    font-size: 21px;
+    text-align: center;
+    line-height: 24px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 370px) {
@@ -339,6 +419,12 @@
     -ms-flex-align: center;
     align-items: center;
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .consultation__descr {
+    max-width: 250px;
   }
 }
 
