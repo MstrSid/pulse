@@ -293,6 +293,41 @@
   margin-top: 5px;
 }
 
+.slider {
+  padding: 80px 0;
+}
+
+.slider__inner {
+  position: relative;
+  width: 750px;
+  margin: 0 auto;
+}
+
+.slider-next, .slider-prev {
+  cursor: pointer;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+}
+
+.slider-prev {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -66px;
+}
+
+.slider-next {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: auto;
+  right: -66px;
+}
+
+.slider .tns-item img {
+  display: block;
+  margin: 0 auto;
+}
+
 @media (max-width: 1191px) {
   .consultation__wrapper {
     margin-left: 20px;
@@ -433,6 +468,7 @@
 }
 
 .container {
+  position: relative;
   max-width: 950px;
   margin: 0 auto;
 }
