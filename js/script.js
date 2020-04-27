@@ -15,7 +15,7 @@ const slider = tns({
         gutter: 30
       },
       900: {
-        items: 1
+        items: 1,
       }
     }
 });
@@ -48,5 +48,23 @@ $(document).ready(function(){
 
   tgl('.catalog-item__link');
   tgl('.catalog-item__back');
+
+  //Modal
+
+  $('[data-modal=consultation]').on('click', function(){
+    $('.overlay, #consultation').fadeIn('slow');
+  });
+  
+  $('.modal__close').on('click', function(){
+    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+  });
+
+  $('.button_mini').each(function(i){
+    $(this).on('click', function(){
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+    });
+  });
+  
 
 });

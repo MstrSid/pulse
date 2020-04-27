@@ -1,0 +1,40 @@
+.feed{
+    margin-bottom: 120px;
+    &-item{
+        margin-top: 70px;
+        display: flex;
+        img{
+            width: 169px;
+            height: 169px;
+        }
+        &__block{
+            margin-left: 70px;
+            &_usr{
+                font-size: 18px;
+                font-weight: 700;
+                text-align: left;
+                color: #0d0d0d
+            }
+            &_exp{
+                margin-top: 5px;
+                font-size: 14px;
+                font-weight: 300;
+                text-align: left;
+                color: #646464;
+            }
+            &_text{
+                margin-top: 20px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: normal;
+                text-align: left;
+                color: #0d0d0d;
+            }
+        }
+        &:nth-child(2){
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    }
+
+}

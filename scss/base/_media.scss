@@ -7,6 +7,16 @@
     }
 }
 
+@media (max-width: 1099px){
+    .slider{
+        &-prev{
+            left: 0;
+        }
+        &-next{
+            right: 0;
+            }
+}
+}
 
 @media (max-width: 960px){
     .advantages{
@@ -15,6 +25,17 @@
         }
     }
     
+    .catalog{
+        &__content{
+            justify-content: center;
+        }
+    }
+    .feed{
+        &-item{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
     .header{
         justify-content: space-around;
     }
@@ -23,6 +44,18 @@
         &__wrapper{
             padding-right: 50px;
         }
+    }
+
+    .slider{
+        &__nav{
+            display: flex;
+            justify-content: center;
+        }
+        &-next, &-prev{
+            margin: 20px 10px 20px 10px;
+            position: relative;
+        }
+        
     }
 
     .title{
@@ -40,7 +73,20 @@
             flex-direction: column;
         }
     }
-    
+
+    .catalog{
+        &__tabs{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__tab{
+            width: 80%;
+            margin: 5px 0;
+        }
+    }
+
     .header{
 
         &__official{
@@ -54,6 +100,40 @@
             width: 100%;
             padding: 0;
             align-items: center;
+        }
+    }
+
+    .slider{
+        .tns-item{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 580px){
+    .feed{
+        &-item{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__block{
+                margin-left: 0;
+                &_usr{
+                    margin-top: 20px;
+                    text-align: center;
+                    text-justify: inter-word;
+                }
+                &_exp{
+                    text-align: center;
+                    text-justify: inter-word;
+                }
+                &_text{
+                    text-align: center;
+                    text-justify: inter-word;
+                }
+            }
         }
     }
 }
@@ -72,6 +152,18 @@
 
     .feed-form{
         margin: 36px auto;
+    }
+
+    .footer{
+        &__info{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            background-color: $main-color;
+            padding: 20px;
+        }
     }
 
     .header{
