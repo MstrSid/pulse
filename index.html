@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+	<link rel="shortcut icon" href="icons/pulse.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/tiny-slider.css">
@@ -109,10 +110,10 @@
                     Просто заполните форму заявки <br>
                     и мы перезвоним вам в течении 10 минут
                 </div>
-                <form class="feed-form" action="#">
-                    <input required name="name" type="text" placeholder="Ваше имя">
-                    <input required name="phone" type="number" placeholder="Ваш телефон">
-                    <input required name="email" type="email" placeholder="Ваш E-mail">
+                <form id="consultation-form" class="feed-form" action="#">
+                    <input name="name"  placeholder="Ваше имя">
+                    <input name="phone"  placeholder="Ваш телефон">
+                    <input name="email"  placeholder="Ваш E-mail">
                     <button class="button button_main">Заказать консультацию</button>
                 </form>
             </div>
@@ -477,9 +478,9 @@
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input required name="name" type="text" placeholder="Ваше имя">
-                <input required name="phone" type="number" placeholder="Ваш телефон">
-                <input required name="email" type="email" placeholder="Ваш E-mail">
+                <input name="name" placeholder="Ваше имя">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш E-mail">
                 <button class="button button_main">Заказать консультацию</button>
             </form>
         </div>
@@ -488,9 +489,9 @@
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed-form feed-form_mt25" action="#">
-                <input required name="name" type="text" placeholder="Ваше имя">
-                <input required name="phone" type="number" placeholder="Ваш телефон">
-                <input required name="email" type="email" placeholder="Ваш E-mail">
+                <input name="name"  placeholder="Ваше имя">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email"  placeholder="Ваш E-mail">
                 <button class="button button_main">Заказать консультацию</button>
             </form>
         </div>
@@ -503,6 +504,8 @@
     </div>
     <script src="js/tiny-slider.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

@@ -53,6 +53,8 @@ $(document).ready(function(){
 
   $('[data-modal=consultation]').on('click', function(){
     $('.overlay, #consultation').fadeIn('slow');
+    $(this).find("input").val("");
+    $('form').trigger('reset');
   });
   
   $('.modal__close').on('click', function(){
@@ -63,8 +65,67 @@ $(document).ready(function(){
     $(this).on('click', function(){
       $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
       $('.overlay, #order').fadeIn('slow');
+      $(this).find("input").val("");
+      $('form').trigger('reset');
     });
   });
   
+  
 
+  function validateForms(form){
+    let val = $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: {
+          required: true,
+          phone: true
+        },
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Поле обязательно для заполнения",
+          minlength: jQuery.validator.format("Как минимум {0} символа!")
+        },
+        phone: {
+          required: "Поле обязательно для заполнения",
+          number: "Ваш телефон не должен содержать запрещенные символы"
+        },
+        email: {
+          required: "Поле обязательно для заполнения",
+          email: "Ваш email должен быть в формате имя@домен.зона"
+        }
+      } 
+    });
+    $('.modal__close').on('click', function(){
+      val.resetForm();
+    });
+  };
+
+  validateForms('#consultation-form');
+  validateForms('#consultation form');
+  validateForms('#order form');
+
+  $('input[name=phone]').mask("+* (***) ***-**-**");
+
+  $('form').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function(){
+      $(this).find("input").val("");
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
+      $('form').trigger('reset');
+    });
+    return false;
+  });
 });
