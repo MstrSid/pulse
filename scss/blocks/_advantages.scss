@@ -1,18 +1,35 @@
-@import '../base/variables';
-@import '../base/mixins';
+@import "../base/variables";
+@import "../base/mixins";
 
-.advantages{
+.advantages {
     min-height: 470px;
     padding: 70px 0 78px 0;
     background-color: #f6f6f6;
 
-    &__item{
+    &__item {
         margin-top: 64px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        &:hover{
+            &:nth-child(1) {
+                img {
+                    animation: shake 3s infinite;
+                }
+            }
+            &:nth-child(2) {
+                img {
+                    animation: heartbeat 3s infinite;
+                }
+            }
+            &:nth-child(3) {
+                img {
+                    animation: run 3s infinite;
+                }
+            }
+        }
 
-        span{
+        span {
             font-size: 18px;
             font-weight: 700;
             font-stretch: normal;
@@ -20,7 +37,7 @@
             color: #0d0d0d;
         }
 
-        &_descr{
+        &_descr {
             margin-top: 38px;
             width: 239px;
             height: 81px;
@@ -31,28 +48,27 @@
             color: #0d0d0d;
         }
 
-        &_img{
+        &_img {
             width: 70px;
             height: 70px;
         }
 
-        &_url{
+        &_url {
             font-size: 14px;
             font-weight: 300;
             color: $main_color;
             text-transform: uppercase;
             text-decoration: underline;
-            &:hover{
+            &:hover {
                 font-size: 14px;
                 font-weight: 300;
                 color: $main_color;
                 text-transform: uppercase;
             }
         }
-
     }
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         justify-content: space-between;
     }
