@@ -1,7 +1,7 @@
 .promo {
   min-height: 650px;
   padding: 20px 0 94px 0;
-  background: url("../../img/main.jpg") center center/cover no-repeat;
+  background: url("../img/main.jpg") center center/cover no-repeat;
 }
 
 .promo__header {
@@ -270,7 +270,7 @@
 .consultation {
   min-height: 680px;
   padding: 100px 0 92px 0;
-  background: url("../../img/consultation.jpg") center center/cover no-repeat;
+  background: url("../img/consultation.jpg") center center/cover no-repeat;
 }
 
 .consultation__descr {
